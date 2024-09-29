@@ -35,8 +35,8 @@
 		- Despesas operacionais (OpEx)
 			- Gastar com produtos e serviços conforme necessário, pagamento conforme o uso
 			- Modelo baseado em consumo
- 
 
+# Conceitos Iniciais de Cloud com Azure
 ## Benefícios da computação em nuvem
 - Convencer o cliente
 - Alta disponibilidade 
@@ -80,6 +80,21 @@
 	- Powershell, linhas de comando, website, APIs etc.
 	- Por exemplo: escalar automaticamente a implantação de recursos com base na necessidade.
 
-# Conceitos Iniciais de Cloud com Azure
-## Localizando serviços por categoria
-- 
+## Tipos de serviços na nuvem
+- Iaas, PaaS e SaaS![[Pasted image 20240929135710.png]]
+	- Não só da azure, geral pra nuvem
+	- IaaS - Infraestrutura as a service
+		- Mais utilizado
+		- Servidores e armazenamento
+		- Firewalls/Segurança de rede
+		- Mais flexível - você configura e gerencia o hardware
+	- PaaS - Plataform as a service
+		- Sistemas operacionais
+		- Ferramentas para desenvolvedores, análise de negócios de gerenciamento de database
+		- Um ambiente para a criação, teste e implantação de aplicativos de software, sem focar no gerencimaneto da infraestrutura subjacente
+		- Focado no desenvolvimento de aplicativos
+	- SaaS - Software as a service
+		- Aplicativos/Apps hospedados (microsoft teams, por exemplo)
+		- Modelo de licenciamento determina (office 365, por exemplo)
+		- Os usuários pagam pelo software em um modelo de assinatura
+- Modelo de **responsabilidade compartilhada** (sempre cai na prova)![[Pasted image 20240929135939.png]]
