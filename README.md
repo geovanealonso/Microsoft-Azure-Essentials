@@ -36,8 +36,8 @@
 			- Gastar com produtos e serviços conforme necessário, pagamento conforme o uso
 			- Modelo baseado em consumo
 
-# Conceitos Iniciais de Cloud com Azure
-## Benefícios da computação em nuvem
+## Conceitos Iniciais de Cloud com Azure
+### Benefícios da computação em nuvem
 - Convencer o cliente
 - Alta disponibilidade 
 	- Se concentra em garantir disponibilidade máxima
@@ -80,7 +80,7 @@
 	- Powershell, linhas de comando, website, APIs etc.
 	- Por exemplo: escalar automaticamente a implantação de recursos com base na necessidade.
 
-## Tipos de serviços na nuvem
+### Tipos de serviços na nuvem
 - Iaas, PaaS e SaaS![[Pasted image 20240929135710.png]]
 	- Não só da azure, geral pra nuvem
 	- IaaS - Infraestrutura as a service
@@ -98,3 +98,47 @@
 		- Modelo de licenciamento determina (office 365, por exemplo)
 		- Os usuários pagam pelo software em um modelo de assinatura
 - Modelo de **responsabilidade compartilhada** (sempre cai na prova)![[Pasted image 20240929135939.png]]
+
+# Módulo 2
+- Componentes de arquitetura do Azure
+	- Regiões
+	- Assinaturas e grupos de recursos
+## Componentes de arquitetura do Azure
+- Vários servidores ao redor do mundo
+	- Mais de 60 regiões em mais de 140 países
+	- Backbone - rede que os datacenters sem comunicam
+	- LGPD - conformidade - determinados dados não podem sair pra fora do Brasil
+	- "Zonas de Disponibilidade" - datacenter![[Pasted image 20240930143519.png]]
+		- Fornece proteção contra tempo de inatividade devido a falha do datacenter
+		- Os dados são copiados entre os datacenters (redundância)
+		- Conectados por fibra ótica
+	- **Pares de regiões**![[Pasted image 20240930144100.png]]
+		- Cada região possui uma região par - uma zona secundária caso a primeira dê problema
+		- No mínimo 300 milhas de separação entre elas
+		- A replicação é automática para *alguns serviços*
+	- **Regições soberanas do Azure**
+		- Regiões exclusivas que não estão disponíveis para clientes normais
+		- China e EUA
+			- Serviços Governamentais pros Eua - para área militar
+				- Acessível somente para personal autorizado
+			- Azure China
+				- Operada pela 21Vianet
+				- Os dados permanecem dentro da China
+	- **Recursos do Azure**
+		- Armazenamento, máquinas virtuais, redes virtuais, banco de dados etc.
+		- Grupo de recursos - uma "caixa" que tudo que você criou está dentro
+			- Possível migrar recursos para outro grupo de recursos
+				- Mas não da pra renomear
+			- Não há jeito certo de managear grupo de recursos, apenas o jeito certo que funciona pra minha empresa
+	- Assinaturas do Azure
+		- Assinatura do desenvolvimento, do teste, da produção
+		- Uma conta pode ter diversas assinaturas, mas uma assinatura está associada a apenas uma conta
+		- Pra cada assinatura tem uma fatura diferente
+	- Grupos de gerenciamento![[Pasted image 20240930153420.png]]
+		- Organização
+		- Regras
+		- Imagem: Duas regras padrões pra uma mesma assinatura![[Pasted image 20240930153613.png]]
+		- Hierarquia ![[Pasted image 20240930153626.png]]
+- Nem todos os recursos estão pra todas as regiões
+- Certificação AZ-900 não requer laboratório (entrar no site)
+- https://datacenters.microsoft.com/globe/explore/
