@@ -142,3 +142,74 @@
 - Nem todos os recursos estão pra todas as regiões
 - Certificação AZ-900 não requer laboratório (entrar no site)
 - https://datacenters.microsoft.com/globe/explore/
+## Computação e Rede
+- Tipos de computação
+	- ![[Pasted image 20240930161918.png]]
+		- **Área de trabalho virtual** - ao invés da empresa disponibilizar um computador, ela pode habilitar uma área de trabalho virtual do azure
+			- Ambiente personalizado
+			- Reduz risco de recurso perdidos - pessoa demetida que não devolve o notebook
+			- Multisessão - mesma área de trabalho que várias pessoas têm sua pastinha
+		- Contêiners
+			- Máquina virtual consome muitos recursos, contêineres consomem de uma forma mais silenciosa
+			- Projeto pra ser dimensionado ou interrompido sempre que necessário
+			- Docker é o mais popular
+			- Não exige um sistema operacional
+			- Instância de contêiner
+				- Oferta de PaaS
+			- Aplicativos de Contêneir
+				- Oferta de PaaS também
+				- Permite trabalho imediato, sem management
+				- Pode balancear a carga e escalar
+				- Falou de contêneir, falou de PaaS
+			- AKS / Azure Kubernetes Server / Serviço de Kubernetes do Azure
+				- "Orquestração" 
+					- Contêiner são vários serviços, e as vezes fica um pouco desorganizado
+					- Gerencia o ciclo de vida dos contêneires
+		- Azure Functions![[Pasted image 20241001184239.png]]
+			- Oferta de PaaS que dá suporte a operações de um computação sem servidor
+			- Precisa de uma situação que aciona ela, com ou sem estado (solitação REST)
+		- Máquinas Virtuais
+			- Emulações de software de computadores físicos
+				- Processador virtual, memória, armazenamento e rede
+				- Infraestrutura as a Service
+					- Responsabilidade compartilhada
+			- Conjuntos de dimensionamento de VMs
+				- Configurar para diversas funções (desenvolvimento, testes etc.)
+			- Conjuntos de disponibilidade de VMs
+				- ![[Pasted image 20240930162513.png]]
+					- 6 máquinas, cada par num rack diferente
+				- Se só tiver um rack, e alguém tropeçar um fio, meu servidor não está altamente disponível
+				- Domínio de falha - rack
+				- Domínio de atualização - cada linha de máquinas![[Pasted image 20240930163710.png]]
+					- Se um pc estiver atualizando, o de baixo estará disponível
+- Hospedagem de aplicativos
+- Redes virtuais
+- COMPARAÇÕES
+	- Máquinas Virtuais
+		- Windows ou Linux
+		- Útil para migrações lift-and-shift para nuvem
+			- Levar máquinas físicas para nuvem (Azure Migrate)
+	- Área de trabalho Virtual
+		- Experiência Windows em nuvem
+		- Logon de vários usuários no mesmo computador
+	- Contêineres
+		- Microserviços, sistema leve
+		- Projeto para escalabilidade por meio de orquestração (Kubernetes)
+		- Aplicativos e serviços são empacotados em um contêneir
+- Serviços de Aplicativos
+	- Plataforma para criar, implantar e dimensionar aplicativos Web e APIs
+	- Trabalha com .NET, .NET Core, Node.js, Java, Python ou php
+	- Oferta de PaaS
+- Rede Virtual do Azure (VNet)
+	- Permite a comunicação entre os recursos dentro do Azure
+	- Duas Vnets não falam entre si por padrão, para proteger contra ataques
+- Gateway de VPN
+	- Enviar tráfego criptografado entre uma rede virtual do Azure e uma local pela Internet Pública
+	- ![[Pasted image 20241001190256.png]]
+- Express Route
+	- Alternativa de Gateway
+	- Um cambeamento direto (conexão privada), ao invés de usar a internet pública
+- DNS do Azure
+	- Segurança
+	- Resolvedor de nome
+	- Permite usar nomes de domínio privados e totalmente personalizados em suas redes virtuais privadas
