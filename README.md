@@ -213,3 +213,67 @@
 	- Segurança
 	- Resolvedor de nome
 	- Permite usar nomes de domínio privados e totalmente personalizados em suas redes virtuais privadas
+## Armazenamento no Azure
+- Contas de Armazenamento / Storage Accounts
+	- Precisa der um **nome globalmente exclusivo**
+		- Nomear: sto + projeto + completar com qualquer coisas
+
+- Redundância
+	- ![[Pasted image 20241003093512.png]]
+		- **LRS** - mesmo datacenter![[Pasted image 20241003094027.png]]
+		- Quanto mais noves mais disponibilidade
+		- **ZRS** - zona - 3 datacenters na mesma região![[Pasted image 20241003094036.png]]
+		- **GRS** - redundância geográfica - modelo de cópia LRS duplicado
+		- **GZRS** - cópias nos 3 datacenters em uma região e uma única vez em uma região par
+			- Assíncrono - na região par tem um delay, mas na mesma região é síncrono
+			- O dado na região par não é para consumir, é apenas de backup
+- Blobs, files, filas e mensagens
+	- **Blob** do Azure
+		- Otimizado para armazenamento de quantidades massivas de dados **não estruturados**
+			- Vídeo, texto, de tudo!!
+			- Armazena de tudo
+	- Disco do Azure
+		- Discos paras máquinas virtuais, aplicativos e outros serviços
+	- Fila do azure
+		- Armazenamento de mensagens
+		- Fornece armazenamento e recuperação para grandes quantidades de mensagens, cada uma com até 64 kb
+		- Uma aplicação pode gerar mensagens
+	- Files (Arquivos) do Azure
+		- Se não for o primeiro, o segundo mais utilizado
+		- "Pastinha na nuvem"
+	- Tabelas do Azure
+		- Opção de chave/atributo para o armazenamento de dados estruturados não relacionais
+- Pontos de extermidade públicos do serviço de armazenamento
+	- O endereço
+	- ![[Pasted image 20241003102029.png]]
+	- Caiu na prova: apontar o endereço de blob para aplicação
+- Camadas de acesso de armazenamento do Azure
+	- ![[Pasted image 20241003102449.png]]
+	- Muda o custo
+	- Frequente - cobra mais pelo repositório cobra pouquinho com cada acesso
+	- Esporádico - cobra menos pelo repositório e mais para consulta
+	- Frio - cobra menos ainda pelo repositório e mais para consulta
+	-  Arquivo Morto - mais usado para o backup.
+		- Repositório fica mais barato porque o azure separa os arquivos entre servidores, e dá mais trabalho para juntar tudo para consulta
+- **Migrações para o azure**
+	- Ambiente on-premise para computação em nuvem
+	- Legacy
+	- Azure data box
+		- Serviço de migração física
+		- Até **80 tb** de dados
+		- ![[Pasted image 20241003103234.png]]
+		- Amazon tem o snowmobile - 100 pb
+		- Caso de uso: um cliente que é de uma localidade distante e que não faria sentido transferir estes dados pela internet.
+			- Conectividade limitada ou sem conectividade
+- Opções de gerenciamento de arquivos
+	- AzCopy
+		- Utilitário de linha de comando
+		- Ajuda a copiar dados para os blobs
+		- Não é uma via de mão dupla
+	- Gerenciador de Armazenamento do Azure
+		- Também faz uma cópia, mas tem interface gráfica
+		- Compátivel com o Windows, MacOS e Linux
+		- Utiliza o AzCopy por trás das cortinas
+	- Sincronização de Arquivos do Azure
+		- Sincronização **bidirecional**
+		- Opção: os arquivos não utilizados há mais de 30 dias, mover pra nuvem
