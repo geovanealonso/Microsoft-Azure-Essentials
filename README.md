@@ -277,3 +277,54 @@
 	- Sincronização de Arquivos do Azure
 		- Sincronização **bidirecional**
 		- Opção: os arquivos não utilizados há mais de 30 dias, mover pra nuvem
+## Identidade, acesso e segurança
+- Segurança é responsabilidade nossa (do usuário)
+- Microsoft Entra ID
+	- Antigamente (2023 pra trás) se chamava Azure Active Directory
+	- Usuários deletados podem ser restorados por 30 dias
+	- Família "Entra" de produtos tem a ver com segurança
+	- Entra connect - conector entre ambiente on premise em nuvem
+	- Responsabilidades
+		- Autenticação
+		- Logon único (SSO - Single Sign On) - uma aplicação de windows pode entrar automaticamente se usar a funcionalidade Entra ID (porque ela já está logado no windows)
+	- Autenticação VS Autorização
+		- Autenticação - identifica a pessoa, mostra credenciais. "Autentiquei, logo existo"
+		- Autorização - nível de acesso
+		- Uma pessoa pode autenticar (mostrar as credenciais) mas não ser autorizada a fazer nada
+		- A ideia é que as pessoas tenham o menos de autorização possível
+	- Autenticação multifator
+		- Algo que você sabe (login e senha)
+		- Algo que você possui (celular)
+		- Algo que você é
+	- Autenticação B2B
+		- Login com google e etc
+		- ![[Pasted image 20241006112724.png]]
+	- B2C
+		- ![[Pasted image 20241006112919.png]]
+	- Acesso condicional
+		- Variáveis
+			- Associação de usuário ou grupo
+			- Local do IP
+			- Dispositivo
+			- Aplicativo
+			- Detecção de risco
+		- Controle de acesos baseado em função (RBAC)
+			- Herdável
+- Microsoft Domain Service
+- Microsoft Defender para Nuvem
+	- Nativo de nuvem
+	- Monitoramento que fornece proteção contra ameaças nos datacentes dos Azure (também faz de outros clouds, como AWS)
+	- 30 dias grátis
+		- Tem como pagar apenas paras camadas que fazem sentido
+	- Recursos
+		- Recomendações
+		- Detectar e bloquear malware
+		- Just-in-time para portas (liberação)
+- Confiança Zero
+	- Não confie em ninguém e desconfie de todos
+	- Pressupõe sempre o pior cenário
+	- Smpre presumir que algo foi violado
+	- ![[Pasted image 20241006113632.png]]
+	- 
+- Modelo de defesa em profundidade
+	- Camadas de segurança
