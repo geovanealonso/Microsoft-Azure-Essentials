@@ -328,3 +328,27 @@
 	- 
 - Modelo de defesa em profundidade
 	- Camadas de segurança
+
+# Módulo 3 - Gerenciamento e Governança
+## Gerenciamento de custos
+- Marcas ou tags
+	- Não sou obrigatórias nem herdáveis
+	- Consistem em um par nome-valor.
+	- Ajuda a reunir informações de cobrança (na fatura)
+	- Dá pra criar uma policy exigindo a criação de tag
+- Fatores que afetam os custos
+	- Tipo de recurso
+	- Consumo (Pay as you go OU pré pago)
+	- Manutenção
+	- Área geográfica
+	- Tráfego de rede (pelas regiões)
+	- Assinatura (tipo e configuração)
+- Azure Marketplace
+	- Aplicações de outra marca
+	- Quando adicionado um recurso não nativo do azure, não procurar o suporte da microsoft - mas sim do fabricante
+- Calcuradora de preços
+	- Apenas uma estimativa, não um valor exato. Porque há muitas variáveis
+	- Região, camada, cobrança, suporte, ofertas
+	- Calculadora de custo total de Propriedade (TCO)
+		- Estimular a economia de custos na migração pro azure
+		- Desmistificar o azure pra uma empresa
