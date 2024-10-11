@@ -352,3 +352,29 @@
 	- Calculadora de custo total de Propriedade (TCO)
 		- Estimular a economia de custos na migração pro azure
 		- Desmistificar o azure pra uma empresa
+## Governança
+- Governança e conformidade
+	- Azure Policy
+		- Padrões de conformidade na organização
+		- Dá pra proibir uma região
+		- Até a pessoa com todos os direitos está sujeito as policys
+		- Estados - ativado ou desativado
+			- Deixa a configuração pronta mas não deixar ativo
+			- ![[Pasted image 20241011151912.png]]
+				- Non compliant - não deixa criar um novo recurso por causa das policys
+				- Remediation - um recurso já pronto que precisa ser alterado por causa de uma nova policy
+- Bloqueio de recursos
+	- Proteger recursos de exclusão ou modificação acidental
+	- Pode gerar um problema: as vezes uma automação pode querer se autoexcluir e pode ser impedida
+	- Bloqueios são herdáveis (bloqueio no resource grupo será herdade por todos os recursos)
+	- Bloqueios sempre caiem na prova!!
+	- ![[Pasted image 20241011153120.png]]
+- Portal de Confiança do Serviço
+	- Lugar onde a microsoft problemas as políticas da microsoft
+- Microsoft Purview
+	- Aplicação Nova
+	- Família de soluções de governança, risco e conformidade
+	- Ajuda a obter uma única exibição unificade em seus dados.
+	- ![[Pasted image 20241011153711.png]]
+	- Microsoft Priva
+		- Serviço dentro do Purview que ajuda em quesitos regulatórios (lgpd)
