@@ -378,3 +378,22 @@
 	- ![[Pasted image 20241011153711.png]]
 	- Microsoft Priva
 		- Serviço dentro do Purview que ajuda em quesitos regulatórios (lgpd)
+## Ferramentas de implantação de recursos
+- Portal, PowerShell, CLI - ferramentas pra interagir com o azure
+	- ![[Pasted image 20241013181656.png]]
+- Azure Arc 
+	- Ferramenta nova
+	- Multicloud - gerenciar multiplos serviços em várias clouds
+- Azure Resource Manager (ARM)
+	- Fornece uma camada de gerenciamento que permite criar, atualizar e excluir recursos na assinatura do Azure.​
+	- Modelos do ARM
+		- São arquvios JSON - JavaScript Object Notation
+		- Pre requisitos
+			- ![[Pasted image 20241013182309.png]]
+- Infraestrutura como código
+	- Reaproveitamento de código (infraestrutura pronta)
+- Azure Bicep
+	- linguagem de programação - compatível apenas com microsoft
+	- ![[Pasted image 20241013182417.png]]
+	- linguagem mais amigável que JSON
+	- azure.github.io/bicep
